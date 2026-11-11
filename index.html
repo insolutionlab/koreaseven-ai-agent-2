@@ -2050,13 +2050,12 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 <section id="s8"><h2>대용량 점포 매출 데이터 구조 진단 및 결측·이상치 식별</h2>
 
 <article class="card"><h3>점포 매출 데이터 무결성 검증 및 이상치 식별</h3>
-<h4 class="sub">[판 1] 한 번에 붙여넣는 판</h4>
 <h4 class="sub">학습자 붙여넣기 순서:</h4>
 <label class="chk"><input type="checkbox"><span>1단계: 엑셀에서 가상_점포별_일별매출.xlsx 파일을 엽니다.</span></label>
 <label class="chk"><input type="checkbox"><span>2단계: 머리 행을 포함한 데이터 전체 영역인 A1 셀부터 G1501 셀까지(총 1,501행)를 선택하여 복사(Ctrl+C)합니다.</span></label>
 <label class="chk"><input type="checkbox"><span>3단계: 아래 프롬프트 본문의 [데이터 시작]과 [데이터 끝] 표지 사이에 복사한 내용을 붙여넣기(Ctrl+V)합니다.</span></label>
 <label class="chk"><input type="checkbox"><span>4단계: 복사 시작부터 복사 끝까지 프롬프트 전체를 복사하여 챗지피티 엔터프라이즈 입력창에 전송합니다.</span></label>
-<div class="pbox"><div class="ph"><span class="pt">점포 매출 데이터 무결성 검증 및 이상치 식별 요청문 (판 1)</span><button class="cp" onclick="cp('p16',this)">지시문 복사</button></div><pre id="p16">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 점포 매출 데이터를 탭 구분 표로 읽고 데이터 무결성을 검증하여 구조 진단 결과를 제시하십시오.
+<div class="pbox"><div class="ph"><span class="pt">점포 매출 데이터 무결성 검증 및 이상치 식별 요청문</span><button class="cp" onclick="cp('p16',this)">지시문 복사</button></div><pre id="p16">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 점포 매출 데이터를 탭 구분 표로 읽고 데이터 무결성을 검증하여 구조 진단 결과를 제시하십시오.
 
 [진단 요구사항]
 - 데이터셋 전체 행 수, 열 목록, 열별 데이터 유형 및 단위를 명시하십시오.
@@ -2073,55 +2072,18 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 [데이터 시작]
 <mark class="fill">(여기에 엑셀에서 복사한 점포별 일별 매출 데이터 A1:G1501 영역 전체를 붙여넣으십시오)</mark>
 [데이터 끝]</pre></div>
-<h4 class="sub">[판 2] 두 조각으로 나눠 보내는 판 (9월 1일~15일, 9월 16일~30일)</h4>
-<h4 class="sub">학습자 붙여넣기 순서:</h4>
-<label class="chk"><input type="checkbox"><span>1단계: 엑셀에서 가상_점포별_일별매출.xlsx 파일을 엽니다.</span></label>
-<label class="chk"><input type="checkbox"><span>2단계: 1차 전송을 위해 머리 행과 9월 1일~15일 영역인 A1 셀부터 G751 셀까지(총 751행)를 복사(Ctrl+C)합니다.</span></label>
-<label class="chk"><input type="checkbox"><span>3단계: 아래 [1차 전송: 9월 1일~15일 수신 대기용] 프롬프트의 [데이터 시작]과 [데이터 끝] 사이에 붙여넣고 전송합니다.</span></label>
-<label class="chk"><input type="checkbox"><span>4단계: 챗지피티가 수신 확인 메시지를 출력하고 대기 상태가 되면, 2차 전송을 위해 9월 16일~30일 영역인 A752 셀부터 G1501 셀까지(총 750행)를 복사(Ctrl+C)합니다.</span></label>
-<label class="chk"><input type="checkbox"><span>5단계: 아래 [2차 전송: 9월 16일~30일 분석 시작용] 프롬프트의 [데이터 시작]과 [데이터 끝] 사이에 붙여넣고 전송하여 전체 진단을 실행합니다.</span></label>
-<div class="pbox"><div class="ph"><span class="pt">1차 전송: 9월 1일~15일 수신 대기용 프롬프트</span><button class="cp" onclick="cp('p17',this)">지시문 복사</button></div><pre id="p17">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 글은 전체 점포 매출 데이터 중 첫 번째 조각인 2025년 9월 1일부터 15일까지 10개 점포의 실적 데이터(머리 행 포함 751행)입니다. 이 글을 탭 구분 표로 읽어 내부 메모리에 보관하고, 지금은 구조 진단이나 이상치 분석을 진행하지 마십시오.
-
-오직 다음 한 문장으로만 답변하고 다음 입력을 기다리십시오.
-"9월 1일~15일 1차 데이터를 정상적으로 수신하여 저장했습니다. 9월 16일~30일 2차 데이터를 입력해 주십시오."
-
-[데이터 시작]
-<mark class="fill">(여기에 엑셀에서 복사한 9월 1일~15일 데이터 A1:G751 영역을 붙여넣으십시오)</mark>
-[데이터 끝]</pre></div>
-<div class="pbox"><div class="ph"><span class="pt">2차 전송: 9월 16일~30일 분석 시작용 프롬프트</span><button class="cp" onclick="cp('p18',this)">지시문 복사</button></div><pre id="p18">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 글은 전체 점포 매출 데이터 중 두 번째 조각인 2025년 9월 16일부터 30일까지 10개 점포의 실적 데이터(머리 행 없이 750행)입니다. 이 글을 탭 구분 표로 읽은 후, 앞서 전달받아 보관 중인 첫 번째 조각(9월 1일~15일)과 행 방향으로 병합하여 전체 1,500행의 온전한 점포 매출 데이터셋을 완성하십시오.
-
-1차와 2차 데이터는 같은 대화에서 이어 입력하십시오. 각 조각의 데이터 행 수와 첫·마지막 일자를 확인하고, 병합 후 데이터행이 1,500개인지 검증하십시오. 이전 조각을 확인할 수 없거나 수가 맞지 않으면 분석하지 말고 해당 조각을 다시 요청하십시오.
-
-데이터 병합이 완료되면 아래 [진단 요구사항]에 따라 무결성 검증 및 구조 진단을 시작하십시오.
-
-[진단 요구사항]
-- 데이터셋 전체 행 수, 열 목록, 열별 데이터 유형 및 단위를 명시하십시오.
-- 고유 점포명 목록, 상권유형 목록, 상품군 목록을 정리하십시오.
-- 데이터가 비어 있는 결측 셀의 위치(행 번호 및 열 이름)를 식별하십시오.
-- 수치가 0으로 입력된 셀의 위치를 확인하십시오.
-- 동일 점포 및 동일 상품군의 일반적 매출 흐름과 비교하여 과도하게 높거나 낮은 이상치를 식별하고 해당 일자, 점포명, 상품군, 매출액을 기술하십시오.
-- 이상치는 동일 점포·동일 상품군별 IQR 1.5배 경계로 판정하고, Q1·Q3·IQR·적용 행 수와 이상치 원값을 제시하십시오. 기준을 계산할 수 없으면 임의 판정하지 마십시오.
-- 데이터의 임의 수정이나 삭제 없이 식별된 진단 결과만을 객관적인 문장으로 기술하십시오.
-
-[확인 단계]
-병합 진단 결과로 제시된 전체 데이터 행 수(1,500행), 결측 셀 위치, 수치 0 셀 위치, 이상치 매출액 수치가 원본 엑셀 파일의 행 개수 및 필터 조회 결과와 대조할 수 있도록 답 끝에 대조용 수치 목록으로 따로 모아 제시하십시오.
-
-[데이터 시작]
-<mark class="fill">(여기에 엑셀에서 복사한 9월 16일~30일 데이터 A752:G1501 영역을 붙여넣으십시오)</mark>
-[데이터 끝]</pre></div>
 <div class="sol"><div class="solk">[풀이]</div><h4>대용량 점포 매출 데이터 구조 진단과 이상치 판정</h4><p>대규모 매출 데이터에서 결측치와 수치 영의 위치를 찾아내고 사분위간 범위를 기준으로 통계적 이상치를 선별합니다. 정제되지 않은 데이터로 인한 매출 왜곡을 방지하고 원본 파일과 대조하여 분석의 신뢰성을 확보합니다.</p></div>
 </article>
 </section>
 <section id="s9"><h2>조건부 데이터 추출 및 다차원 집계 분석</h2>
 
 <article class="card"><h3>상권 유형 및 기상 조건 연계 교차 집계</h3>
-<h4 class="sub">[판 1] 한 번에 붙여넣는 판</h4>
 <h4 class="sub">학습자 붙여넣기 순서:</h4>
 <label class="chk"><input type="checkbox"><span>1단계: 엑셀에서 가상_점포별_일별매출.xlsx 파일을 엽니다.</span></label>
 <label class="chk"><input type="checkbox"><span>2단계: 머리 행을 포함한 데이터 전체 영역인 A1 셀부터 G1501 셀까지(총 1,501행)를 선택하여 복사(Ctrl+C)합니다.</span></label>
 <label class="chk"><input type="checkbox"><span>3단계: 아래 프롬프트 본문의 [데이터 시작]과 [데이터 끝] 표지 사이에 복사한 내용을 붙여넣기(Ctrl+V)합니다.</span></label>
 <label class="chk"><input type="checkbox"><span>4단계: 복사 시작부터 복사 끝까지 프롬프트 전체를 복사하여 챗지피티 엔터프라이즈 입력창에 전송합니다.</span></label>
-<div class="pbox"><div class="ph"><span class="pt">상권 유형 및 기상 조건 연계 교차 집계 요청문 (판 1)</span><button class="cp" onclick="cp('p19',this)">지시문 복사</button></div><pre id="p19">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 점포 매출 데이터를 탭 구분 표로 읽고 이를 기반으로 조건부 다차원 매출 집계를 수행하십시오.
+<div class="pbox"><div class="ph"><span class="pt">상권 유형 및 기상 조건 연계 교차 집계 요청문</span><button class="cp" onclick="cp('p17',this)">지시문 복사</button></div><pre id="p17">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 점포 매출 데이터를 탭 구분 표로 읽고 이를 기반으로 조건부 다차원 매출 집계를 수행하십시오.
 
 [처리 규칙]
 - 결측치가 포함된 셀은 해당 집계에서 제외하되 행 전체는 삭제하지 마십시오.
@@ -2141,57 +2103,17 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 [데이터 시작]
 <mark class="fill">(여기에 엑셀에서 복사한 점포별 일별 매출 데이터 A1:G1501 영역 전체를 붙여넣으십시오)</mark>
 [데이터 끝]</pre></div>
-<h4 class="sub">[판 2] 두 조각으로 나눠 보내는 판 (9월 1일~15일, 9월 16일~30일)</h4>
-<h4 class="sub">학습자 붙여넣기 순서:</h4>
-<label class="chk"><input type="checkbox"><span>1단계: 엑셀에서 가상_점포별_일별매출.xlsx 파일을 엽니다.</span></label>
-<label class="chk"><input type="checkbox"><span>2단계: 1차 전송을 위해 머리 행과 9월 1일~15일 영역인 A1 셀부터 G751 셀까지(총 751행)를 복사(Ctrl+C)합니다.</span></label>
-<label class="chk"><input type="checkbox"><span>3단계: 아래 [1차 전송: 9월 1일~15일 수신 대기용] 프롬프트의 [데이터 시작]과 [데이터 끝] 사이에 붙여넣고 전송합니다.</span></label>
-<label class="chk"><input type="checkbox"><span>4단계: 챗지피티가 수신 확인 메시지를 출력하고 대기 상태가 되면, 2차 전송을 위해 9월 16일~30일 영역인 A752 셀부터 G1501 셀까지(총 750행)를 복사(Ctrl+C)합니다.</span></label>
-<label class="chk"><input type="checkbox"><span>5단계: 아래 [2차 전송: 9월 16일~30일 집계 시작용] 프롬프트의 [데이터 시작]과 [데이터 끝] 사이에 붙여넣고 전송하여 전체 다차원 집계를 실행합니다.</span></label>
-<div class="pbox"><div class="ph"><span class="pt">1차 전송: 9월 1일~15일 수신 대기용 프롬프트</span><button class="cp" onclick="cp('p20',this)">지시문 복사</button></div><pre id="p20">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 글은 전체 점포 매출 데이터 중 첫 번째 조각인 2025년 9월 1일부터 15일까지 10개 점포의 실적 데이터(머리 행 포함 751행)입니다. 이 글을 탭 구분 표로 읽어 내부 메모리에 보관하고, 지금은 집계 연산을 진행하지 마십시오.
-
-오직 다음 한 문장으로만 답변하고 다음 입력을 기다리십시오.
-"9월 1일~15일 1차 데이터를 정상적으로 수신하여 저장했습니다. 9월 16일~30일 2차 데이터를 입력해 주십시오."
-
-[데이터 시작]
-<mark class="fill">(여기에 엑셀에서 복사한 9월 1일~15일 데이터 A1:G751 영역을 붙여넣으십시오)</mark>
-[데이터 끝]</pre></div>
-<div class="pbox"><div class="ph"><span class="pt">2차 전송: 9월 16일~30일 집계 시작용 프롬프트</span><button class="cp" onclick="cp('p21',this)">지시문 복사</button></div><pre id="p21">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 글은 전체 점포 매출 데이터 중 두 번째 조각인 2025년 9월 16일부터 30일까지 10개 점포의 실적 데이터(머리 행 없이 750행)입니다. 이 글을 탭 구분 표로 읽은 후, 앞서 전달받아 보관 중인 첫 번째 조각(9월 1일~15일)과 결합하여 전체 1,500행의 점포 매출 데이터셋을 완성하십시오.
-
-1차와 2차 데이터는 같은 대화에서 이어 입력하십시오. 각 조각의 데이터 행 수와 첫·마지막 일자를 확인하고, 병합 후 데이터행이 1,500개인지 검증하십시오. 이전 조각을 확인할 수 없거나 수가 맞지 않으면 분석하지 말고 해당 조각을 다시 요청하십시오.
-
-데이터 결합이 완료되면 아래 [처리 규칙] 및 요구사항에 따라 조건부 다차원 매출 집계를 시작하십시오.
-
-[처리 규칙]
-- 결측치가 포함된 셀은 해당 집계에서 제외하되 행 전체는 삭제하지 마십시오.
-- 이상치 데이터는 원값을 유지하여 계산하고 하단에 별도 주석으로 표기하십시오.
-
-[산출 집계표]
-- 점포별 총 매출액 합계 및 총 판매건수 합계 테이블 (매출액 기준 내림차순 정렬, 천 단위 쉼표 표기)
-- 최고기온 30도 이상 조건 하의 점포별 음료 상품군 매출 합계 및 발생 일수 테이블
-- 발생 일수는 점포별로 최고기온 30도 이상이며 음료 매출 데이터가 있는 서로 다른 날짜의 수로 계산하십시오. 같은 날짜에 음료 행이 여러 개여도 하루로 한 번만 셉니다.
-
-[정합성 검증]
-- 집계 결과 하단에 전체 데이터의 총 매출액 합산 금액을 명시하여 엑셀 원천 데이터와 교차 대조할 수 있도록 하십시오.
-
-[확인 단계]
-산출된 점포별 총 매출액 합계, 총 판매건수 합계, 기온 30도 이상 음료 상품군 매출 합계 및 발생 일수, 전체 총 매출액 합산 수치가 원본 엑셀 파일에서 SUM, COUNTIFS 함수 및 피벗 테이블로 산출한 원본 합계와 대조할 수 있도록 답 끝에 대조용 수치 목록으로 따로 모아 제시하십시오.
-
-[데이터 시작]
-<mark class="fill">(여기에 엑셀에서 복사한 9월 16일~30일 데이터 A752:G1501 영역을 붙여넣으십시오)</mark>
-[데이터 끝]</pre></div>
 <div class="sol"><div class="solk">[풀이]</div><h4>조건부 다차원 교차 집계를 통한 매출 패턴 진단</h4><p>특정 기온 조건과 상권 유형에 따른 상품군별 매출 합계 및 발생 일수를 다차원으로 교차 집계합니다. 전체 총합을 원본 데이터와 대조 검증하여 기상 변동에 따른 점포별 수요 변화를 정밀하게 파악합니다.</p></div>
 </article>
 </section>
 <section id="s10"><h2>시계열 데이터 시각화 및 공공 통계 비교 분석</h2>
 
 <article class="card"><h3>일별 매출 변동 차트 및 공공 유통 동향 대조</h3>
-<h4 class="sub">[판 1] 한 번에 붙여넣는 판</h4>
 <h4 class="sub">학습자 붙여넣기 순서:</h4>
 <label class="chk"><input type="checkbox"><span>1단계: 엑셀에서 가상_점포별_일별매출.xlsx 파일을 열고 전체 범위인 A1 셀부터 G1501 셀까지(총 1,501행)를 복사(Ctrl+C)하여 아래 프롬프트 본문의 [점포 매출 데이터 시작]과 [점포 매출 데이터 끝] 사이에 붙여넣습니다.</span></label>
 <label class="chk"><input type="checkbox"><span>2단계: D1_원본.xlsx 파일은 메모장으로 열면 한글 인코딩이 깨질 수 있으므로 반드시 엑셀 프로그램으로 직접 열어 A1 셀부터 AI9 셀까지(머리 행 포함 9행 전체)를 복사(Ctrl+C)한 뒤, 아래 프롬프트 본문의 [공공 통계 데이터 시작]과 [공공 통계 데이터 끝] 사이에 붙여넣습니다.</span></label>
 <label class="chk"><input type="checkbox"><span>3단계: 복사 시작부터 복사 끝까지 프롬프트 전체를 복사하여 챗지피티 엔터프라이즈 입력창에 전송합니다.</span></label>
-<div class="pbox"><div class="ph"><span class="pt">일별 매출 변동 차트 및 공공 유통 동향 대조 요청문 (판 1)</span><button class="cp" onclick="cp('p22',this)">지시문 복사</button></div><pre id="p22">아래 각각의 표지 사이에 붙여 넣은 점포 매출 데이터와 공공 유통 통계 데이터를 탭 구분 표로 읽고 연계 분석하여 시각화 차트와 거시 동향 비교 결과를 도출하십시오.
+<div class="pbox"><div class="ph"><span class="pt">일별 매출 변동 차트 및 공공 유통 동향 대조 요청문</span><button class="cp" onclick="cp('p18',this)">지시문 복사</button></div><pre id="p18">아래 각각의 표지 사이에 붙여 넣은 점포 매출 데이터와 공공 유통 통계 데이터를 탭 구분 표로 읽고 연계 분석하여 시각화 차트와 거시 동향 비교 결과를 도출하십시오.
 
 [요구사항]
 - 점포별 선 그래프를 작성하십시오. 각 날짜·점포별로 모든 상품군의 매출액을 합산해 일 매출을 계산하고, 가로축은 날짜, 세로축은 점포별 일 매출액, 범례는 점포명으로 설정하십시오. 전체 점포 합계를 함께 제시할 때는 별도 단일 선으로 표시하십시오.
@@ -2212,45 +2134,6 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 [공공 통계 데이터 시작]
 <mark class="fill">(여기에 엑셀로 열어 복사한 D1_원본.xlsx 데이터 A1:AI9 영역을 붙여넣으십시오. 메모장 열기 금지)</mark>
 [공공 통계 데이터 끝]</pre></div>
-<h4 class="sub">[판 2] 두 조각으로 나눠 보내는 판 (9월 1일~15일 1차, 9월 16일~30일 및 D1_원본 2차)</h4>
-<h4 class="sub">학습자 붙여넣기 순서:</h4>
-<label class="chk"><input type="checkbox"><span>1단계: 엑셀에서 가상_점포별_일별매출.xlsx 파일을 열고 머리 행과 9월 1일~15일 영역인 A1 셀부터 G751 셀까지(총 751행)를 복사(Ctrl+C)합니다.</span></label>
-<label class="chk"><input type="checkbox"><span>2단계: 아래 [1차 전송: 9월 1일~15일 수신 대기용] 프롬프트의 [데이터 시작]과 [데이터 끝] 사이에 붙여넣고 전송합니다.</span></label>
-<label class="chk"><input type="checkbox"><span>3단계: 챗지피티가 수신 확인 메시지를 출력하고 대기하면, 엑셀에서 9월 16일~30일 영역인 A752 셀부터 G1501 셀까지(총 750행)를 복사하여 2차 프롬프트의 [점포 매출 데이터 시작]과 [점포 매출 데이터 끝] 사이에 붙여넣습니다.</span></label>
-<label class="chk"><input type="checkbox"><span>4단계: D1_원본.xlsx 파일을 엑셀 프로그램으로 열고(메모장 열기 금지) A1 셀부터 AI9 셀까지(총 9행)를 복사하여 2차 프롬프트의 [공공 통계 데이터 시작]과 [공공 통계 데이터 끝] 사이에 붙여넣은 뒤 전송하여 분석을 시작합니다.</span></label>
-<div class="pbox"><div class="ph"><span class="pt">1차 전송: 9월 1일~15일 수신 대기용 프롬프트</span><button class="cp" onclick="cp('p23',this)">지시문 복사</button></div><pre id="p23">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 글은 전체 점포 매출 데이터 중 첫 번째 조각인 2025년 9월 1일부터 15일까지 10개 점포의 실적 데이터(머리 행 포함 751행)입니다. 이 글을 탭 구분 표로 읽어 내부 메모리에 보관하고, 지금은 시각화나 분석을 진행하지 마십시오.
-
-오직 다음 한 문장으로만 답변하고 다음 입력을 기다리십시오.
-"9월 1일~15일 1차 매출 데이터를 정상적으로 수신하여 저장했습니다. 9월 16일~30일 2차 매출 데이터와 D1 공공 통계 데이터를 입력해 주십시오."
-
-[데이터 시작]
-<mark class="fill">(여기에 엑셀에서 복사한 9월 1일~15일 데이터 A1:G751 영역을 붙여넣으십시오)</mark>
-[데이터 끝]</pre></div>
-<div class="pbox"><div class="ph"><span class="pt">2차 전송: 9월 16일~30일 및 D1_원본 분석 시작용 프롬프트</span><button class="cp" onclick="cp('p24',this)">지시문 복사</button></div><pre id="p24">아래 각각의 표지 사이에 붙여 넣은 글은 점포 매출 데이터의 두 번째 조각인 2025년 9월 16일부터 30일까지 10개 점포의 실적 데이터(머리 행 없이 750행)와 D1 공공 유통 통계 데이터입니다.
-
-두 데이터를 탭 구분 표로 읽은 후, 앞서 전달받아 보관 중인 9월 1일~15일 데이터와 이번 9월 16일~30일 데이터를 결합하여 전체 1,500행 점포 매출 데이터셋을 완성하십시오. 그런 다음 D1 공공 통계 데이터와 연계 분석하여 아래 요구사항에 따른 시각화 차트와 거시 동향 비교 결과를 도출하십시오.
-
-1차와 2차 데이터는 같은 대화에서 이어 입력하십시오. 각 조각의 데이터 행 수와 첫·마지막 일자를 확인하고, 병합 후 데이터행이 1,500개인지 검증하십시오. 이전 조각을 확인할 수 없거나 수가 맞지 않으면 분석하지 말고 해당 조각을 다시 요청하십시오.
-
-[요구사항]
-- 점포별 선 그래프를 작성하십시오. 각 날짜·점포별로 모든 상품군의 매출액을 합산해 일 매출을 계산하고, 가로축은 날짜, 세로축은 점포별 일 매출액, 범례는 점포명으로 설정하십시오. 전체 점포 합계를 함께 제시할 때는 별도 단일 선으로 표시하십시오.
-- 점포별 최고 매출 달성일과 최저 매출 달성일을 해당 수치와 함께 정리하십시오.
-- 공공 통계 데이터의 '편의점_총계' 열을 참조하여 월별 전년 동월 대비 매출 증가율 추이를 정리하고 최고 성장률 및 최저 성장률 기록 시점을 명시하십시오.
-- 원천 데이터에 명시되지 않은 외부 요인은 자의적으로 해석하지 마십시오.
-
-[차트 생성 불가 시 대체 안내]
-만약 현재 대화창 화면에 다중 꺾은선 차트 그림을 직접 생성하여 표시하지 못하는 경우, 학습자가 엑셀 프로그램에서 동일한 차트를 직접 만들 수 있도록 데이터 배치 방법(피벗 테이블 구성)과 엑셀 리본 메뉴 클릭 순서, 축 및 범례 서식 설정 단계를 상세히 기술하십시오.
-
-[확인 단계]
-점포별 최고 및 최저 매출 달성일의 매출액 수치와 D1 공공 통계의 최고/최저 성장률 수치가 원본 엑셀 파일의 MAX, MIN 수식 결과 및 원본 표 수치와 대조할 수 있도록 답 끝에 대조용 수치 목록으로 따로 모아 제시하십시오.
-
-[점포 매출 데이터 시작]
-<mark class="fill">(여기에 엑셀에서 복사한 9월 16일~30일 데이터 A752:G1501 영역을 붙여넣으십시오)</mark>
-[점포 매출 데이터 끝]
-
-[공공 통계 데이터 시작]
-<mark class="fill">(여기에 엑셀로 열어 복사한 D1_원본.xlsx 데이터 A1:AI9 영역을 붙여넣으십시오. 메모장 열기 금지)</mark>
-[공공 통계 데이터 끝]</pre></div>
 <div class="sol"><div class="solk">[풀이]</div><h4>시계열 매출 추이 시각화와 공공 통계 동향 비교</h4><p>점포별 일별 매출 흐름을 시계열 차트로 시각화하고 공공 유통 통계의 성장률 추이를 나란히 살펴봅니다. 일별 매출 자료(2025년 9월)와 공공 통계 자료(2025년 12월~2026년 7월)는 대상 기간이 다르므로 직접적인 인과나 영향을 단정하지 않고 개별 점포의 실적 추이와 거시적 시장 흐름을 나란히 대조하여 참고 자료로 활용합니다.</p></div>
 </article>
 </section>
@@ -2262,7 +2145,7 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 <label class="chk"><input type="checkbox"><span>2단계: 데이터 전체(200행)를 복사할 필요 없이, 머리 행(1행)과 앞 다섯 개 데이터 행(2~6행)에 해당하는 A1 셀부터 G6 셀까지(총 6행)만 마우스로 드래그하여 복사(Ctrl+C)합니다.</span></label>
 <label class="chk"><input type="checkbox"><span>3단계: 아래 프롬프트 본문의 [데이터 시작]과 [데이터 끝] 표지 사이에 복사한 내용을 붙여넣기(Ctrl+V)합니다.</span></label>
 <label class="chk"><input type="checkbox"><span>4단계: 복사 시작부터 복사 끝까지 프롬프트 전체를 복사하여 챗지피티 엔터프라이즈 입력창에 전송합니다.</span></label>
-<div class="pbox"><div class="ph"><span class="pt">폐기율 산출 및 기준 초과 데이터 자동 분리 요청문</span><button class="cp" onclick="cp('p25',this)">지시문 복사</button></div><pre id="p25">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 텍스트는 엑셀 파일 가상_상품군별_주간_발주재고.xlsx의 '발주재고' 시트 머리 행과 앞 다섯 개 데이터 행(A1:G6) 샘플입니다. 이 글을 탭 구분 표로 읽어 시트 구조와 데이터 형태를 파악한 후, 2행부터 마지막 데이터 행까지 전체를 처리하는 완성형 VBA 매크로 코드를 작성하십시오.
+<div class="pbox"><div class="ph"><span class="pt">폐기율 산출 및 기준 초과 데이터 자동 분리 요청문</span><button class="cp" onclick="cp('p19',this)">지시문 복사</button></div><pre id="p19">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 텍스트는 엑셀 파일 가상_상품군별_주간_발주재고.xlsx의 '발주재고' 시트 머리 행과 앞 다섯 개 데이터 행(A1:G6) 샘플입니다. 이 글을 탭 구분 표로 읽어 시트 구조와 데이터 형태를 파악한 후, 2행부터 마지막 데이터 행까지 전체를 처리하는 완성형 VBA 매크로 코드를 작성하십시오.
 
 [시트 환경]
 - 시트명: 발주재고
@@ -2292,7 +2175,7 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 <label class="chk"><input type="checkbox"><span>2단계: 데이터 전체를 복사할 필요 없이, 머리 행(1행)과 앞 다섯 개 데이터 행(2~6행)에 해당하는 A1 셀부터 G6 셀까지(총 6행)만 마우스로 드래그하여 복사(Ctrl+C)합니다.</span></label>
 <label class="chk"><input type="checkbox"><span>3단계: 아래 프롬프트 본문의 [데이터 시작]과 [데이터 끝] 표지 사이에 복사한 내용을 붙여넣기(Ctrl+V)합니다.</span></label>
 <label class="chk"><input type="checkbox"><span>4단계: 복사 시작부터 복사 끝까지 프롬프트 전체를 복사하여 챗지피티 엔터프라이즈 입력창에 전송합니다.</span></label>
-<div class="pbox"><div class="ph"><span class="pt">동적 배열 함수 기반 데이터 필터링 요청문</span><button class="cp" onclick="cp('p26',this)">지시문 복사</button></div><pre id="p26">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 텍스트는 엑셀 파일 가상_상품군별_주간_발주재고.xlsx의 머리 행 및 앞 다섯 개 데이터 행(A1:G6) 샘플입니다. 이 글을 탭 구분 표로 읽어 데이터 구조를 파악하고, 매크로 없이 엑셀 수식만으로 데이터를 처리하는 완성형 수식 체계를 작성하십시오.
+<div class="pbox"><div class="ph"><span class="pt">동적 배열 함수 기반 데이터 필터링 요청문</span><button class="cp" onclick="cp('p20',this)">지시문 복사</button></div><pre id="p20">아래 [데이터 시작]과 [데이터 끝] 표지 사이에 붙여 넣은 텍스트는 엑셀 파일 가상_상품군별_주간_발주재고.xlsx의 머리 행 및 앞 다섯 개 데이터 행(A1:G6) 샘플입니다. 이 글을 탭 구분 표로 읽어 데이터 구조를 파악하고, 매크로 없이 엑셀 수식만으로 데이터를 처리하는 완성형 수식 체계를 작성하십시오.
 
 [수식 구성 요구사항]
 - H2 셀 적용 폐기율 산출 수식: 발주수량(D열)이 0이거나 빈 셀이면 '확인 필요'를 표기하고 정상 수치이면 폐기수량 / 발주수량 계산
@@ -2311,7 +2194,7 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 <p class="desc">비정형 텍스트를 구조화된 표 데이터로 가공하고 결측치와 이상치를 식별하여 데이터 정합성을 진단합니다.</p>
 <article class="card"><h3>고객 피드백 데이터 구조화</h3>
 <p class="goal">비정형 고객 피드백 메모를 스프레드시트용 표 구조로 분류하고 가공해 봅시다.</p>
-<div class="pbox"><div class="ph"><span class="pt">비정형 메모의 정형 표 변환 요청문</span><button class="cp" onclick="cp('p27',this)">지시문 복사</button></div><pre id="p27">아래 제시된 고객 의견 메모를 스프레드시트에 바로 붙여 넣을 수 있는 정형 표 구조로 변환해 주세요.
+<div class="pbox"><div class="ph"><span class="pt">비정형 메모의 정형 표 변환 요청문</span><button class="cp" onclick="cp('p21',this)">지시문 복사</button></div><pre id="p21">아래 제시된 고객 의견 메모를 스프레드시트에 바로 붙여 넣을 수 있는 정형 표 구조로 변환해 주세요.
 표의 열 구성은 번호, 접수일, 점포명, 접수경로, 원문요약, 분류주제, 고객감정, 실무조치로 구성해 주세요.
 분류주제는 온도, 대기시간, 상품진열, 결품, 응대태도, 매장청결, 기타 가운데 하나로 지정해 주세요.
 고객감정은 긍정, 부정, 제안 가운데 하나로 판정해 주세요.
@@ -2320,14 +2203,14 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 [자료 시작]
 [고객 의견 메모 데이터]
 [자료 끝]</pre></div>
-<div class="pbox"><div class="ph"><span class="pt">주제별 집계 및 시각화 요청문</span><button class="cp" onclick="cp('p28',this)">지시문 복사</button></div><pre id="p28">변환된 표 데이터를 바탕으로 분류주제별 건수를 정확히 집계해 주세요.
+<div class="pbox"><div class="ph"><span class="pt">주제별 집계 및 시각화 요청문</span><button class="cp" onclick="cp('p22',this)">지시문 복사</button></div><pre id="p22">변환된 표 데이터를 바탕으로 분류주제별 건수를 정확히 집계해 주세요.
 집계 결과를 시각적 그래프로 생성해 제시해 주세요.
 시스템 환경상 그래프 이미지 생성이 지원되지 않는 경우에는 건수와 비중을 정리한 텍스트 표로 제시해 주세요.</pre></div>
 <div class="sol"><div class="solk">[풀이]</div><h4>비정형 고객 피드백의 정형 데이터 변환</h4><p>줄글로 접수된 비정형 고객 불만과 건의 사항을 표준 분류 기준에 맞추어 스프레드시트용 정형 표 데이터로 변환합니다. 정제된 데이터를 기반으로 주제별 빈도와 고객 감정 분포를 신속하게 파악하여 현장 개선 조치로 연결합니다.</p></div>
 </article>
 <article class="card"><h3>매출 데이터 결측치 탐색</h3>
 <p class="goal">점포 매출 데이터에서 누락된 값을 찾고 데이터 보완 방안을 수립해 봅시다.</p>
-<div class="pbox"><div class="ph"><span class="pt">결측치 식별 및 처리 방안 요청문</span><button class="cp" onclick="cp('p29',this)">지시문 복사</button></div><pre id="p29">아래 점포 매출 데이터에서 매출액 수치가 비어 있는 행을 찾아 일자, 점포명, 상품군을 명시해 주세요.
+<div class="pbox"><div class="ph"><span class="pt">결측치 식별 및 처리 방안 요청문</span><button class="cp" onclick="cp('p23',this)">지시문 복사</button></div><pre id="p23">아래 점포 매출 데이터에서 매출액 수치가 비어 있는 행을 찾아 일자, 점포명, 상품군을 명시해 주세요.
 비어 있는 수치를 임의로 추정하여 채우지 말고 결측치를 다룰 수 있는 현실적인 아이디어 5개를 제시해 주세요.
 각 처리 방식의 장점과 분석 왜곡 위험을 함께 설명해 주세요.
 [자료 시작]
@@ -2337,23 +2220,23 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 </article>
 <article class="card"><h3>이상치 탐색 및 원인 분석</h3>
 <p class="goal">정상적인 추세를 벗어나는 이상치를 탐색하고 원인 분석을 위한 추가 자료를 파악해 봅시다.</p>
-<div class="pbox"><div class="ph"><span class="pt">이상치 식별 및 분석 방안 요청문</span><button class="cp" onclick="cp('p30',this)">지시문 복사</button></div><pre id="p30">동일한 점포와 동일한 상품군의 다른 날짜 매출 실적과 비교하여 비정상적으로 크게 튀는 값을 찾아 주세요.
+<div class="pbox"><div class="ph"><span class="pt">이상치 식별 및 분석 방안 요청문</span><button class="cp" onclick="cp('p24',this)">지시문 복사</button></div><pre id="p24">동일한 점포와 동일한 상품군의 다른 날짜 매출 실적과 비교하여 비정상적으로 크게 튀는 값을 찾아 주세요.
 해당 수치를 이상치로 판단한 명확한 통계적 근거를 제시해 주세요.
 비정상적인 값을 분석에 반영할 때 적용할 수 있는 현실적 대처 방안 3개를 제시해 주세요.</pre></div>
-<div class="pbox"><div class="ph"><span class="pt">원인 규명을 위한 추가 자료 요구 요청문</span><button class="cp" onclick="cp('p31',this)">지시문 복사</button></div><pre id="p31">인위적인 데이터 왜곡이나 임의 가공 없이 이상치를 정확하게 분석하고 처리하기 위해 실무자가 추가로 제공해야 할 원천 자료가 무엇인지 알려 주세요.
+<div class="pbox"><div class="ph"><span class="pt">원인 규명을 위한 추가 자료 요구 요청문</span><button class="cp" onclick="cp('p25',this)">지시문 복사</button></div><pre id="p25">인위적인 데이터 왜곡이나 임의 가공 없이 이상치를 정확하게 분석하고 처리하기 위해 실무자가 추가로 제공해야 할 원천 자료가 무엇인지 알려 주세요.
 원인 추적을 위해 교차 검증해야 할 사내 데이터 목록을 제안해 주세요.</pre></div>
 <div class="sol"><div class="solk">[풀이]</div><h4>통계적 이상치 식별과 원인 규명 자료 파악</h4><p>일반적인 매출 분포에서 벗어나는 극단적 수치를 통계적 기준을 통해 객관적으로 판별합니다. 이상치 발생 시점의 특수 프로모션이나 상권 변화 등 원인을 규명하기 위한 추가 확인 절차를 진행합니다.</p></div>
 </article>
 <article class="card"><h3>기온과 상품군별 매출 상관관계 분석</h3>
 <p class="goal">기온 변화와 상품군별 매출 간의 통계적 상관관계를 분석해 봅시다.</p>
-<div class="pbox"><div class="ph"><span class="pt">기온과 상품군별 매출 상관관계 분석 요청문</span><button class="cp" onclick="cp('p32',this)">지시문 복사</button></div><pre id="p32">점포 데이터의 최고기온과 상품군별 매출액 간의 통계적 상관관계를 분석해 주세요.
+<div class="pbox"><div class="ph"><span class="pt">기온과 상품군별 매출 상관관계 분석 요청문</span><button class="cp" onclick="cp('p26',this)">지시문 복사</button></div><pre id="p26">점포 데이터의 최고기온과 상품군별 매출액 간의 통계적 상관관계를 분석해 주세요.
 기온 상승 또는 하강에 따라 매출이 비례하거나 반비례하여 움직인 주요 상품군을 식별해 주세요.
 통계적으로 함께 움직인 상관관계가 곧바로 직접적인 인과관계를 의미하지는 않는다는 점을 명확히 명시하여 해석해 주세요.</pre></div>
 <div class="sol"><div class="solk">[풀이]</div><h4>기온 변동과 상품군별 매출의 상관관계 분석</h4><p>최고기온의 변화와 상품군별 매출액 사이의 선형적 관련성을 파악하여 기상 조건에 따른 소비 패턴을 진단합니다. 상관계수는 두 변수가 함께 움직이는 정도만을 나타내며 인과관계를 의미하지 않으므로 해석에 주의합니다.</p></div>
 </article>
 <article class="card"><h3>점포 매출 영향 요인 다중회귀분석</h3>
 <p class="goal">기온과 판매건수 및 상권과 상품군이 매출액에 미치는 영향을 다중회귀분석으로 검증해 봅시다.</p>
-<div class="pbox"><div class="ph"><span class="pt">점포 매출 영향 요인 다중회귀분석 요청문</span><button class="cp" onclick="cp('p33',this)">지시문 복사</button></div><pre id="p33">점포 매출 데이터를 바탕으로 매출액에 영향을 미치는 여러 요인을 통계적으로 검증하기 위해 다중회귀분석을 수행해 주세요.
+<div class="pbox"><div class="ph"><span class="pt">점포 매출 영향 요인 다중회귀분석 요청문</span><button class="cp" onclick="cp('p27',this)">지시문 복사</button></div><pre id="p27">점포 매출 데이터를 바탕으로 매출액에 영향을 미치는 여러 요인을 통계적으로 검증하기 위해 다중회귀분석을 수행해 주세요.
 종속변수는 매출액(원)으로 설정해 주세요.
 독립변수는 최고기온(℃), 판매건수, 상권유형, 상품군을 투입해 주세요. 범주형 변수인 상권유형과 상품군은 가변수로 처리해 주세요.
 결측치가 포함된 행은 분석에서 제외하고 실제 분석에 투입된 유효 표본 수를 명시해 주세요.
@@ -2371,7 +2254,7 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 <p class="desc">분석 결과를 시각화하고 웹 브라우저에서 단독 실행되는 반응형 대시보드 코드를 작성합니다.</p>
 <article class="card"><h3>반응형 대시보드 웹 문서 작성</h3>
 <p class="goal">외부 라이브러리 없이 독립 실행되는 대시보드 HTML 코드를 생성하고 확인해 봅시다.</p>
-<div class="pbox"><div class="ph"><span class="pt">독립 실행형 반응형 대시보드 코드 생성 요청문</span><button class="cp" onclick="cp('p34',this)">지시문 복사</button></div><pre id="p34">앞서 분석한 점포 매출 데이터를 바탕으로 마우스 커서를 올리면 세부 수치가 표시되는 반응형 대시보드를 작성해 주세요.
+<div class="pbox"><div class="ph"><span class="pt">독립 실행형 반응형 대시보드 코드 생성 요청문</span><button class="cp" onclick="cp('p28',this)">지시문 복사</button></div><pre id="p28">앞서 분석한 점포 매출 데이터를 바탕으로 마우스 커서를 올리면 세부 수치가 표시되는 반응형 대시보드를 작성해 주세요.
 외부 인터넷 연결이나 외부 라이브러리 참조 없이 단독 실행될 수 있도록 HTML과 CSS 및 자바스크립트를 단일 파일 코드로 작성해 주세요.
 화면에는 점포별 선택 필터, 상품군별 매출 비중 차트, 일자별 매출 추이 차트가 포함되어야 합니다.
 생략이나 중략 없이 전체 코드를 통째로 온전히 제시해 주세요.</pre></div>
@@ -2385,14 +2268,14 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 <p class="desc">직전에 확인한 발주 재고 데이터를 기반으로 폐기율 자동 계산 수식 체계를 구축하고 반복 업무를 처리하는 자동화 매크로를 작성합니다.</p>
 <article class="card"><h3>폐기율 자동 산출 수식 및 매크로 작성</h3>
 <p class="goal">발주 및 재고 데이터의 폐기율을 자동으로 계산하는 스프레드시트 수식과 매크로 코드를 작성해 봅시다.</p>
-<div class="pbox"><div class="ph"><span class="pt">폐기율 산출 수식 체계 구성 요청문</span><button class="cp" onclick="cp('p35',this)">지시문 복사</button></div><pre id="p35">아래 제시된 200행의 발주 재고 데이터를 분석하여 점포별 및 상품군별 폐기율을 구하고자 합니다.
+<div class="pbox"><div class="ph"><span class="pt">폐기율 산출 수식 체계 구성 요청문</span><button class="cp" onclick="cp('p29',this)">지시문 복사</button></div><pre id="p29">아래 제시된 200행의 발주 재고 데이터를 분석하여 점포별 및 상품군별 폐기율을 구하고자 합니다.
 폐기율 산출 공식은 폐기수량을 발주수량으로 나눈 비율이며 발주수량이 0인 경우에는 0%로 두지 말고 해당 없음으로 표시해 주세요.
 외부 매크로 기능을 사용하지 않고 순수 스프레드시트 기본 수식만으로 자동 집계할 수 있는 수식 체계를 구축해 주세요.
 적용할 셀 위치와 정확한 함수 공식을 차례대로 제시해 주세요.
 [자료 시작]
 [상품군별 주간 발주 재고 데이터]
 [자료 끝]</pre></div>
-<div class="pbox"><div class="ph"><span class="pt">자동 집계 매크로 코드 및 실행 절차 요청문</span><button class="cp" onclick="cp('p36',this)">지시문 복사</button></div><pre id="p36">동일한 발주 재고 데이터에서 점포별 상품군별 폐기율을 자동으로 일괄 계산하는 업무 자동화 매크로 코드를 작성해 주세요.
+<div class="pbox"><div class="ph"><span class="pt">자동 집계 매크로 코드 및 실행 절차 요청문</span><button class="cp" onclick="cp('p30',this)">지시문 복사</button></div><pre id="p30">동일한 발주 재고 데이터에서 점포별 상품군별 폐기율을 자동으로 일괄 계산하는 업무 자동화 매크로 코드를 작성해 주세요.
 작성된 코드를 스프레드시트 편집기 화면에 등록하고 실행하는 구체적인 단계를 빠짐없이 순서대로 설명해 주세요.
 단축키 지정 방법과 실행 단추 등록 방법도 함께 명시해 주세요.</pre></div>
 <label class="chk"><input type="checkbox"><span>수식 및 매크로 작업 결과를 프로젝트 자료에 추가합니다</span></label>
@@ -2403,7 +2286,7 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 <p class="desc">예약됨 메뉴를 활용해 정해진 시각에 시장 정보를 자동으로 수집하고 부서 현업에 즉시 적용할 자동화 과업을 구체화합니다.</p>
 <article class="card"><h3>부서 자동화 대상 과업 도출</h3>
 <p class="goal">부서 업무 가운데 인공지능으로 즉시 자동화할 수 있는 핵심 과업 10개를 도출해 봅시다.</p>
-<div class="pbox"><div class="ph"><span class="pt">부서별 자동화 가능 핵심 과업 도출 요청문</span><button class="cp" onclick="cp('p37',this)">지시문 복사</button></div><pre id="p37">우리 부서의 주요 업무는 [부서 업무 한 줄]입니다.
+<div class="pbox"><div class="ph"><span class="pt">부서별 자동화 가능 핵심 과업 도출 요청문</span><button class="cp" onclick="cp('p31',this)">지시문 복사</button></div><pre id="p31">우리 부서의 주요 업무는 [부서 업무 한 줄]입니다.
 현재 챗지피티 엔터프라이즈 환경에서 프로젝트와 예약됨 기능만을 활용하고 있으며 파일을 올리지 않고 본문에 텍스트로 직접 붙여 넣어 작업합니다.
 이러한 시스템 조건에서 우리 부서가 당장 도입할 수 있는 실행 과업 10개를 도출해 주세요.
 각 과업마다 기대되는 업무 자동화 수준과 구체적인 활용 방안을 함께 제시해 주세요.</pre></div>
@@ -2411,7 +2294,7 @@ h4.sub{margin-top:18px;font-size:18px;font-weight:800;color:var(--navy)}
 </article>
 <article class="card"><h3>정기 모니터링 예약 작업 설정</h3>
 <p class="goal">예약 작업은 프로젝트 내부 지식을 직접 참조하지 못하므로 일반 대화에서 정해진 시간에 최신 뉴스를 자동 수집하는 예약 작업을 생성해 봅시다.</p>
-<div class="pbox"><div class="ph"><span class="pt">정기 뉴스 모니터링 예약 작업 생성 요청문</span><button class="cp" onclick="cp('p38',this)">지시문 복사</button></div><pre id="p38">매일 아침 8시에 웹 검색을 통해 국내 편의점 및 유통업계 최신 뉴스를 찾아 주세요.
+<div class="pbox"><div class="ph"><span class="pt">정기 뉴스 모니터링 예약 작업 생성 요청문</span><button class="cp" onclick="cp('p32',this)">지시문 복사</button></div><pre id="p32">매일 아침 8시에 웹 검색을 통해 국내 편의점 및 유통업계 최신 뉴스를 찾아 주세요.
 기사 제목, 보도 출처, 핵심 내용 한 줄 요약 형태로 주요 기사 5건을 선별하여 알림으로 전달해 주세요.</pre></div>
 <label class="chk"><input type="checkbox"><span>예약됨 메뉴 화면에 생성된 작업이 정상적으로 등록되었는지 확인합니다</span></label>
 <label class="chk"><input type="checkbox"><span>계정 설정의 알림 메뉴에서 작업 알림 수신 상태를 확인합니다</span></label>
